@@ -3,11 +3,16 @@ branches:
   only:
     - develop
 
+environment:
+  QTDIR: C:\Qt\5.11\mingw53_32
+  
 install:
-  - set QTDIR=C:\Qt\5.8\mingw53_32
-  - choco install -y InnoSetup
-  - set PATH=%QTDIR%\bin;C:\Qt\Tools\mingw530_32\bin;%PATH%;"C:\Program Files (x86)\Inno Setup 5"
-
+  - set PATH=%PATH%;%QTDIR%\bin;C:\Qt\Tools\mingw530_32\bin
+  - set CC=C:\Qt\Tools\mingw530_32\bin\gcc.exe
+  - set CXX=C:\Qt\Tools\mingw530_32\bin\g++.exe
+  - set Qt5_DIR=%QTDIR%\lib\cmake\Qt5
+  - set PATH=%PATH:C:\Program Files\Git\usr\bin=% # trick to remove sh.exe
+  
 build_script:
   - qmake src/src.pro  #-spec win32-g++ "CONFIG+=debug" "DEFINES+=MYDEFINES"
   #- C:\Qt\Tools\QtCreator\bin\jom.exe -f Makefile
