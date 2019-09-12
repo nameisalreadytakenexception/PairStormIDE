@@ -9,7 +9,7 @@ install:
   - set PATH=%QTDIR%\bin;C:\Qt\Tools\mingw530_32\bin;%PATH%;"C:\Program Files (x86)\Inno Setup 5"
 
 build_script:
-  - qmake src/src.pro  -spec win32-g++ "CONFIG+=debug" "DEFINES+=MYDEFINES"
+  - qmake src/src.pro  #-spec win32-g++ "CONFIG+=debug" "DEFINES+=MYDEFINES"
   #- C:\Qt\Tools\QtCreator\bin\jom.exe -f Makefile
   - mingw32-make
   - dir
