@@ -12,8 +12,7 @@ install:
   - source /opt/qt58/bin/qt58-env.sh
  
 script:
-  - qmake -qt=qt5 -v
-  - qmake -qt=qt5
+  - ls
   - cd src
   - qmake src.pro
   - make
