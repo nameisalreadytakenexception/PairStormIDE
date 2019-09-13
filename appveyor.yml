@@ -11,7 +11,7 @@ install:
   - set CC=C:\Qt\Tools\mingw530_32\bin\gcc.exe
   - set CXX=C:\Qt\Tools\mingw530_32\bin\g++.exe
   - set Qt5_DIR=%QTDIR%\lib\cmake\Qt5
-  - set PATH=%PATH:C:\Program Files\Git\usr\bin=% # trick to remove sh.exe
+  - set PATH=%PATH:"C:\Program Files\Git\usr\bin"=% # trick to remove sh.exe
   
 build_script:
   - qmake src/src.pro  #-spec win32-g++ "CONFIG+=debug" "DEFINES+=MYDEFINES"
