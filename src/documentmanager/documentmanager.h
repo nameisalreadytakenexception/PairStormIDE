@@ -4,6 +4,15 @@
 #include <functional>
 #include <QObject>
 
+#include <QMdiSubWindow>
+#include <QDirIterator>
+#include <QMessageBox>
+#include <QSplitter>
+#include <algorithm>
+#include <QMdiArea>
+#include <QVector>
+#include <QDebug>
+#include <QDir>
 class QMdiSubWindow;
 class CodeEditor;
 class QSplitter;
